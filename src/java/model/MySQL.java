@@ -13,9 +13,9 @@ public class MySQL {
         Connection conn = null;
         try {
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
-            System.out.println("Connected to the database");
+            System.out.println("Connected to the Database");
         } catch (SQLException e) {
-            System.out.println("Failed to connect to the database");
+            System.out.println("Failed to connect to the Database");
             e.printStackTrace();
         }
         return conn;
