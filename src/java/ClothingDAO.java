@@ -1,28 +1,38 @@
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ClothingDAO {
-    // Assuming you have a method to get the database connection
+     private static final String URL = "jdbc:mysql://localhost:3306/ecommerceshop";
+    private static final String USER = "root"; 
+    private static final String PASSWORD = ""; 
+    
     private Connection getConnection() {
-        // Implement your database connection logic here
-        // Example:
-        // return YourDatabaseConnection.getConnection();
-        return null; // Replace this with your actual database connection logic
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            System.out.println("Connected to the Database");
+        } catch (SQLException e) {
+            System.out.println("Failed to connect to the Database");
+            e.printStackTrace();
+        }
+        return conn; 
     }
     
-    public void addClothing(String name, String type, double price) {
+    public void addClothing( String id, String name, String type, double price) {
         Connection conn = null;
         PreparedStatement stmt = null;
         
         try {
             conn = getConnection();
             if (conn != null) {
-                String sql = "INSERT INTO clothing_table (name, type, price) VALUES (?, ?, ?)";
+                String sql = "INSERT INTO clothing_table (id, name, type, price) VALUES (?, ?, ?)";
                 stmt = conn.prepareStatement(sql);
-                stmt.setString(1, name);
-                stmt.setString(2, type);
-                stmt.setDouble(3, price);
+                stmt.setString(1, id);
+                stmt.setString(2, name);
+                stmt.setString(3,type);
+                stmt.setDouble(4,price);
                 
                 // Execute the update
                 stmt.executeUpdate();
@@ -47,5 +57,9 @@ public class ClothingDAO {
                 }
             }
         }
+    }
+
+    void addClothing(int id, String name, String type, double price) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

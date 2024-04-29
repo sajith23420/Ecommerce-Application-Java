@@ -55,7 +55,7 @@ public final class adminpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            font-family: Arial, sans-serif;\n");
       out.write("            margin: 0;\n");
       out.write("            padding: 0;\n");
-      out.write("            background-color: #f4f4f4;\n");
+      out.write("            background-color: pink;\n");
       out.write("        }\n");
       out.write("        .container {\n");
       out.write("            max-width: 600px;\n");
@@ -69,7 +69,7 @@ public final class adminpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            text-align: center;\n");
       out.write("            margin-bottom: 20px;\n");
       out.write("        }\n");
-      out.write("        form {\n");
+      out.write("        form { \n");
       out.write("            text-align: center;\n");
       out.write("        }\n");
       out.write("        input[type=\"text\"], input[type=\"submit\"] {\n");
@@ -81,13 +81,13 @@ public final class adminpage_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            box-sizing: border-box;\n");
       out.write("        }\n");
       out.write("        input[type=\"submit\"] {\n");
-      out.write("            background-color: #4CAF50;\n");
+      out.write("            background-color: green;\n");
       out.write("            color: white;\n");
       out.write("            border: none;\n");
       out.write("            cursor: pointer;\n");
       out.write("        }\n");
       out.write("        input[type=\"submit\"]:hover {\n");
-      out.write("            background-color: #45a049;\n");
+      out.write("            background-color: green;\n");
       out.write("        }\n");
       out.write("    </style>\n");
       out.write("</head>\n");

@@ -16,7 +16,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: pink;
         }
         .container {
             max-width: 600px;
@@ -30,7 +30,7 @@
             text-align: center;
             margin-bottom: 20px;
         }
-        form {
+        form { 
             text-align: center;
         }
         input[type="text"], input[type="submit"] {
@@ -42,13 +42,13 @@
             box-sizing: border-box;
         }
         input[type="submit"] {
-            background-color: #4CAF50;
+            background-color: green;
             color: white;
             border: none;
             cursor: pointer;
         }
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: green;
         }
     </style>
 </head>

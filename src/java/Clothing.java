@@ -12,13 +12,14 @@ public class Clothing extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // Retrieve form data
+        String id = request.getParameter("id");
         String name = request.getParameter("name");
         String type = request.getParameter("type");
         double price = Double.parseDouble(request.getParameter("price"));
         
         // Save clothing item to database (assuming you have a ClothingDAO class)
         ClothingDAO clothingDAO = new ClothingDAO();
-        clothingDAO.addClothing(name, type, price);
+        clothingDAO.addClothing(id, name, type, price);
         
         // Redirect back to admin page
         response.sendRedirect("admin.jsp");
