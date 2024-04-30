@@ -89,7 +89,7 @@
 					</div>
 					<div class="col-md-6 form-group">
 						<label>&nbsp;</label>
-						<button type="submit" class="form-control btn btn-success">
+						<button type="Submit" class="form-control btn btn-success">
 							Pay :Rs
 							<%=amount%></button>
 					</div>
