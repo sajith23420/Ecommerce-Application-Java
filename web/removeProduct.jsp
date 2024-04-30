@@ -33,3 +33,23 @@
 
 	}
 	%>
+<jsp:include page="header.jsp" />
+
+	<%
+	String message = request.getParameter("message");
+	%>
+	<div class="container">
+		<div class="row">
+			<form action="./RemoveProductSrv" method="post"
+				class="col-md-4 col-md-offset-4">
+					<h3>Product Deletion Form</h3>
+					<%
+					if (message != null) {
+					%>
+					<p style="color: blue;">
+						<%=message%>
+					</p>
+					<%
+					}
+					%>
+				</div>
