@@ -128,7 +128,7 @@
 				%>
 
 				<tr style="background-color: grey; color: white;">
-					<td colspan="0" style="text-align: center;">Total Amount to
+					<td colspan="6" style="text-align: center;">Total Amount to
 						Pay (in Rupees)</td>
 					<td><%=totAmount%></td>
 				</tr>
@@ -136,11 +136,11 @@
 				if (totAmount != 0) {
 				%>
 				<tr style="background-color: grey; color: white;">
-					<td colspan="0" style="text-align: center;">
+					<td colspan="4" style="text-align: center;">
 					<td><form method="post">
 							<button formaction="userHome.jsp" style="background-color: black; color: white;">Cancel</button>
 						</form></td>
-					<td colspan="0"><form method="post">
+					<td colspan="2"><form method="post">
 							<button style="background-color: blue; color: white;" 
                                                                 formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
 						</form></td>
