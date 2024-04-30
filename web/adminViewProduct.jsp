@@ -56,3 +56,12 @@
 	}
 	%>
 
+	<jsp:include page="header.jsp" />
+
+	<div class="text-center"
+		style="color: white; font-size: 14px; font-weight: bold;"><%=message%></div>
+	<!-- Start of Product Items List -->
+	<div class="container" style="background-color: #2a2e2b;">
+		<div class="row text-center">
+
+	<%
