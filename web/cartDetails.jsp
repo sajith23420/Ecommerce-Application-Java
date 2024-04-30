@@ -60,7 +60,7 @@
 
 	<jsp:include page="header.jsp" />
 
-        <div class="text-center">Cart
+        <div class="text-center" style="color: white; font-size: 24px; font-weight: bold;">Cart
 		Items</div>
 	<!-- <script>document.getElementById('mycart').innerHTML='<i data-count="20" class="fa fa-shopping-cart fa-3x icon-white badge" style="background-color:#333;margin:0px;padding:0px; margin-top:5px;"></i>'</script>
  -->
@@ -68,7 +68,7 @@
 	<div class="container">
 
 		<table class="table table-hover">
-			<thead>
+			<thead style="background-color: #186188; color: white; font-size: 16px; font-weight: bold;">
 				<tr>
 					<th>Picture</th>
 					<th>Products</th>
@@ -79,7 +79,7 @@
 					<th>Amount</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody style="background-color: white; font-size: 15px; font-weight: bold;">
 
 				<%
 				CartServiceImpl cart = new CartServiceImpl();
@@ -127,21 +127,22 @@
 				}
 				%>
 
-				<tr>
-					<td colspan="0">Total Amount to
+				<tr style="background-color: grey; color: white;">
+					<td colspan="0" style="text-align: center;">Total Amount to
 						Pay (in Rupees)</td>
 					<td><%=totAmount%></td>
 				</tr>
 				<%
 				if (totAmount != 0) {
 				%>
-				<tr>
-					<td colspan="0">
+				<tr style="background-color: grey; color: white;">
+					<td colspan="0" style="text-align: center;">
 					<td><form method="post">
-							<button formaction="userHome.jsp">Cancel</button>
+							<button formaction="userHome.jsp" style="background-color: black; color: white;">Cancel</button>
 						</form></td>
 					<td colspan="0"><form method="post">
-							<button formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
+							<button style="background-color: blue; color: white;" 
+                                                                formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
 						</form></td>
 
 				</tr>
