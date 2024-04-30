@@ -49,7 +49,7 @@
 				<thead
 					style="background-color: black; color: white; font-size: 14px; font-weight: bold;">
 					<tr>
-						<th>Picture</th>
+						<th>Image</th>
 						<th>ProductName</th>
 						<th>OrderId</th>
 						<th>Quantity</th>
