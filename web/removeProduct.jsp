@@ -39,10 +39,12 @@
 	String message = request.getParameter("message");
 	%>
 	<div class="container">
-		<div class="row">
+		<div class="row"  style="margin-top: 2px; margin-left: 2px; margin-right: 2px;">>
 			<form action="./RemoveProductSrv" method="post"
-				class="col-md-4 col-md-offset-4">
-					<h3>Product Deletion Form</h3>
+				class="col-md-4 col-md-offset-4" 
+                                  style="border: 1px solid black; border-radius: 5px; background-color: #FFE5CC; padding: 5px;">
+					<div style="font-weight: bold;" class="text-center">
+					<h3 style="color: blue;">Product Deletion Form</h3>
 					<%
 					if (message != null) {
 					%>
