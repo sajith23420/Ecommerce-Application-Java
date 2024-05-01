@@ -8,12 +8,15 @@
 <title>Cart Details</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/changes.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="background-color: #2a2e2b;">
 
@@ -57,7 +60,8 @@
 
 	<jsp:include page="header.jsp" />
 
-        <div class="text-center" style="color: white; font-size: 24px; font-weight: bold;">Cart
+	<div class="text-center"
+		style="color: white; font-size: 24px; font-weight: bold;">Cart
 		Items</div>
 	<!-- <script>document.getElementById('mycart').innerHTML='<i data-count="20" class="fa fa-shopping-cart fa-3x icon-white badge" style="background-color:#333;margin:0px;padding:0px; margin-top:5px;"></i>'</script>
  -->
@@ -65,7 +69,8 @@
 	<div class="container">
 
 		<table class="table table-hover">
-			<thead style="background-color: #186188; color: white; font-size: 16px; font-weight: bold;">
+			<thead
+				style="background-color: #186188; color: white; font-size: 16px; font-weight: bold;">
 				<tr>
 					<th>Picture</th>
 					<th>Products</th>
@@ -76,7 +81,10 @@
 					<th>Amount</th>
 				</tr>
 			</thead>
-			<tbody style="background-color: white; font-size: 15px; font-weight: bold;">
+			<tbody
+				style="background-color: white; font-size: 15px; font-weight: bold;">
+
+
 
 				<%
 				CartServiceImpl cart = new CartServiceImpl();
@@ -135,11 +143,12 @@
 				<tr style="background-color: grey; color: white;">
 					<td colspan="4" style="text-align: center;">
 					<td><form method="post">
-							<button formaction="userHome.jsp" style="background-color: black; color: white;">Cancel</button>
+							<button formaction="userHome.jsp"
+								style="background-color: black; color: white;">Cancel</button>
 						</form></td>
-					<td colspan="2"><form method="post">
-							<button style="background-color: blue; color: white;" 
-                                                                formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
+					<td colspan="2" align="center"><form method="post">
+							<button style="background-color: blue; color: white;"
+								formaction="payment.jsp?amount=<%=totAmount%>">Pay Now</button>
 						</form></td>
 
 				</tr>
@@ -150,7 +159,6 @@
 		</table>
 	</div>
 	<!-- ENd of Product Items List -->
-
 
 
 	<%@ include file="footer.html"%>
