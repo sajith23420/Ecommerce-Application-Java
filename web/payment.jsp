@@ -20,12 +20,12 @@
 
 	<%
 	/* Checking the user credentials */
-	String userName = (String) session.getAttribute("username");
-	String password = (String) session.getAttribute("password");
+	String userName = (String) session.getAttribute("uname");
+	String password = (String) session.getAttribute("pwd");
 
 	if (userName == null || password == null) {
 
-		response.sendRedirect("login.jsp?message=Session Expired , Login Again!");
+		response.sendRedirect("login.jsp?message=Please try again Later");
 	}
 
 	String sAmount = request.getParameter("amount");
