@@ -85,7 +85,7 @@ button:hover {
 }
 
 .jumbotron {
-	background-color: red(255, 0, 0); /*#f4511e; /* Orange */
+	background-color: red(255, 0, 0); /* Orange */
 	color: #ffffff;
 }
 
