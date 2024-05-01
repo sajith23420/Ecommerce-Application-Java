@@ -14,7 +14,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="css/changes.css">
 </head>
-<body>
+<body style="background-color: #2a2e2b;">
 	<%
 	/* Checking the user credentials */
 	String userType = (String) session.getAttribute("usertype");
@@ -40,13 +40,13 @@
 	String message = request.getParameter("message");
 	%>
 	<div class="container">
-		<div class="row">
-			
+		<div class="row"
+                        style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
 			<form action="./AddProductSrv" method="post"
 				enctype="multipart/form-data" class="col-md-6 col-md-offset-3"
-				>
-				<div>
-					<h2>Product Addition Form</h2>
+				style="color: white; style="border: #2a2e2b; border-radius: 10px; background-color: #2a2e2b; padding: 10px;">
+				<div style="font-weight: bold;" class="text-center">
+					<h2 style="color: orange;">Product Addition Form</h2>
 					<%
 					if (message != null) {
 					%>
