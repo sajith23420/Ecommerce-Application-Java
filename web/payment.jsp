@@ -25,7 +25,7 @@
 
 	if (userName == null || password == null) {
 
-		response.sendRedirect("login.jsp?message=Session Expired, Login Again!!");
+		response.sendRedirect("login.jsp?message=Session Expired , Login Again!");
 	}
 
 	String sAmount = request.getParameter("amount");
