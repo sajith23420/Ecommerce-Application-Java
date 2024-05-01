@@ -8,8 +8,7 @@
 <title>Payments</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
 <link rel="stylesheet" href="css/changes.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -20,17 +19,17 @@
 
 	<%
 	/* Checking the user credentials */
-	String userName = (String) session.getAttribute("uname");
-	String password = (String) session.getAttribute("pwd");
+	String userName = (String) session.getAttribute("username");
+	String password = (String) session.getAttribute("password");
 
 	if (userName == null || password == null) {
 
-		response.sendRedirect("login.jsp?message=Please try again Later");
+		response.sendRedirect("login.jsp?message=Session Expired, Login Again!!");
 	}
 
 	String sAmount = request.getParameter("amount");
 
-	double amount = 1;
+	double amount = 0;
 
 	if (sAmount != null) {
 		amount = Double.parseDouble(sAmount);
@@ -50,7 +49,7 @@
 				<div style="font-weight: bold;" class="text-center">
 					<div class="form-group">
 						<img src="images/User-icon-256-blue.png" alt="Payment Proceed" height="100px" />
-						<h2 style="color: #E6F9E7;">Credit Card Payment</h2>
+						<h2 style="color: #E6F9E6;">Credit Card Payment</h2>
 					</div>
 				</div>
 				<div class="row">
@@ -89,7 +88,7 @@
 					</div>
 					<div class="col-md-6 form-group">
 						<label>&nbsp;</label>
-						<button type="Submit" class="form-control btn btn-success">
+						<button type="submit" class="form-control btn btn-success">
 							Pay :Rs
 							<%=amount%></button>
 					</div>
