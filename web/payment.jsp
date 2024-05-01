@@ -50,7 +50,7 @@
 				<div style="font-weight: bold;" class="text-center">
 					<div class="form-group">
 						<img src="images/User-icon-256-blue.png" alt="Payment Proceed" height="100px" />
-						<h2 style="color: #E6F9E6;">Credit Card Payment</h2>
+						<h2 style="color: #E6F9E7;">Credit Card Payment</h2>
 					</div>
 				</div>
 				<div class="row">
