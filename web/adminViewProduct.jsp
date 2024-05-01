@@ -8,6 +8,8 @@
 <title>View Products</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/changes.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -15,6 +17,7 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body style="background-color: #2a2e2b;">
+
 	<%
 	/* Checking the user credentials */
 	String userName = (String) session.getAttribute("username");
@@ -52,12 +55,15 @@
 		products = prodDao.getAllProducts();
 	}
 	%>
+
+
+
 	<jsp:include page="header.jsp" />
-	<div class="text-center" style="color: white; font-size: 14px; font-weight: bold;"><%=message%>>
-	</div>
+	<div class="text-center" style="color: white; font-size: 14px; font-weight: bold;"><%=message%></div>
 	<!-- Start of Product Items List -->
 	<div class="container" style="background-color: #2a2e2b;">
 		<div class="row text-center">
+
 					<%
 			for (ProductBean product : products) {
 				int cartQty = new CartServiceImpl().getCartItemCount(userName, product.getProdId());
@@ -88,11 +94,14 @@
 					</form>
 				</div>
 			</div>
+
 			<%
 			}
 			%>
+
 		</div>
 	</div>
+	<!-- ENd of Product Items List -->
 <%@ include file="footer.html"%>
 </body>
 </html>
