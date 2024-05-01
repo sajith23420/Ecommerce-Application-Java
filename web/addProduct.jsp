@@ -6,6 +6,8 @@
 <title>Add Product</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
@@ -39,7 +41,7 @@
 	%>
 	<div class="container">
 		<div class="row"
-                        style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
+			style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
 			<form action="./AddProductSrv" method="post"
 				enctype="multipart/form-data" class="col-md-6 col-md-offset-3"
 				style="color: white; style="border: #2a2e2b; border-radius: 10px; background-color: #2a2e2b; padding: 10px;">
@@ -48,7 +50,7 @@
 					<%
 					if (message != null) {
 					%>
-					<p>
+					<p style="color: blue;">
 						<%=message%>
 					</p>
 					<%
