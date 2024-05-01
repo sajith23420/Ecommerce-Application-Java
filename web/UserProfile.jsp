@@ -18,4 +18,21 @@
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+<body style="background-color: #2a2e2b;">
+
+	<%
+	/* Checking the user credentials */
+	String userName = (String) session.getAttribute("username");
+	String password = (String) session.getAttribute("password");
+
+	if (userName == null || password == null) {
+
+		response.sendRedirect("login.jsp?message=Session Expired, Login Again!!");
+	}
+
+	UserService dao = new UserServiceImpl();
+	UserBean user = dao.getUserDetails(userName, password);
+	if (user == null)
+		user = new UserBean("Test User", 98765498765L, "test@gmail.com", "ABC colony, Patna, bihar", 87659, "lksdjf");
+	%>
 
