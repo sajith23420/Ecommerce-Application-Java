@@ -65,19 +65,21 @@
 		<div class="row text-center">
 
 	<%
-for (ProductBean product : products) {
+		for (ProductBean product : products) {
 			int cartQty = new CartServiceImpl().getCartItemCount(userName, product.getProdId());
 			%>
 		<div class="col-sm-4" style='height: 350px;'>
 			<div class="thumbnail">
-		<img src="./ShowImage?pid=<%=product.getProdId()%>" alt="Product"
+		  <img src="./ShowImage?pid=<%=product.getProdId()%>" alt="Product"
 			style="height: 150px; max-width: 180px">
-		<p class="productname"><%=product.getProdName()%>
+		   <p class="productname"><%=product.getProdName()%>
 			</p>
 			<%
-			<%
 		String description = product.getProdInfo();
-			description = description.substring;
-				%>
-				<p class="productinfo"><%=description%>..
-				</p>
+		description = description.substring(0, Math.min(description.length(), 100));
+			%>
+		<p class="productinfo"><%=description%>..
+		</p>
+		<p class="price">
+                	<%=product.getProdPrice()%>
+		</p>
