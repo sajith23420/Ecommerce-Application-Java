@@ -50,12 +50,12 @@
 					style="background-color: black; color: white; font-size: 12px; font-weight: bold;">
 					<tr>
 						<th>Image</th>
-						<th>ProductName</th>
-						<th>OrderId</th>
+						<th>ProductsName</th>
+						<th>OrdersId</th>
 						<th>Quantity</th>
 						<th>Price</th>
 						<th>Time</th>
-						<th>Status</th>
+						<th>Total</th>
 					</tr>
 				</thead>
 				<tbody
