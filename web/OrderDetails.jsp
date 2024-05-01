@@ -47,7 +47,7 @@
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: black; color: white; font-size: 14px; font-weight: bold;">
+					style="background-color: black; color: white; font-size: 12px; font-weight: bold;">
 					<tr>
 						<th>Image</th>
 						<th>ProductName</th>
@@ -83,7 +83,7 @@
 			</table>
 		</div>
 	</div>
-	<!-- ENd of Product Items List -->
+	<!-- End of Product Items List -->
 
 
 	<%@ include file="footer.html"%>
