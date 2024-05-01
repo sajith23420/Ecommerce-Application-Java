@@ -1,17 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <title>Login</title>
+<link rel="stylesheet" href="css/changes.css">
 </head>
 <body style="background-color: #2a2e2b;">
+
+	<%@ include file="header.jsp"%>
+
+	<%
+	String message = request.getParameter("message");
+	%>
 	<div class="container">
 		<div class="row"
 			style="margin-top: 5px; margin-left: 2px; margin-right: 2px;">
-			<form action="" method="post"
+			<form action="./LoginSrv" method="post"
 				class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2"
 				style="color: white; border:  #2a2e2b; border-radius: 10px; background-color: #2a2e2b; padding: 10px;">
 				<div style="font-weight: bold;" class="text-center">
 					<h2 style="color: white;">Login Form</h2>
+					<%
+					if (message != null) {
+					%>
+					<p style="color: blue;">
+						<%=message%>
+					</p>
+					<%
+					}
+					%>
 				</div>
 				<div></div>
 				<div class="row">
@@ -46,5 +64,8 @@
 
 		</div>
 	</div>
+
+	<%@ include file="footer.html"%>
+
 </body>
 </html>
