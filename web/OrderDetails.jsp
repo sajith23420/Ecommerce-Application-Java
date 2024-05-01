@@ -20,8 +20,8 @@
 
 	<%
 	/* Checking the user credentials */
-	String userName = (String) session.getAttribute("username");
-	String password = (String) session.getAttribute("password");
+	String userName = (String) session.getAttribute("uname");
+	String password = (String) session.getAttribute("psw");
 
 	if (userName == null || password == null) {
 
@@ -47,7 +47,7 @@
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: black; color: white; font-size: 12px; font-weight: bold;">
+					style="background-color: black; color: white; font-size: 11px; font-weight: bold;">
 					<tr>
 						<th>Image</th>
 						<th>ProductsName</th>
