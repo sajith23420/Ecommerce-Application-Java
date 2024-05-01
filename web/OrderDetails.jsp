@@ -57,7 +57,7 @@
 					</tr>
 				</thead>
 				<tbody
-					style="background-color: white; font-size: 15px; font-weight: bold;">
+					style="background-color: yellow; font-size: 15px; font-weight: bold;">
 					<%
 					for (OrderDetails order : orders) {
 					%>
