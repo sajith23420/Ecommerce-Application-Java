@@ -30,7 +30,7 @@
 
 	String sAmount = request.getParameter("amount");
 
-	double amount = 0;
+	double amount = 1;
 
 	if (sAmount != null) {
 		amount = Double.parseDouble(sAmount);
