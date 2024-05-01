@@ -8,6 +8,7 @@
 <title>Order Details</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script
@@ -18,8 +19,8 @@
 
 	<%
 	/* Checking the user credentials */
-	String userName = (String) session.getAttribute("uname");
-	String password = (String) session.getAttribute("psw");
+	String userName = (String) session.getAttribute("username");
+	String password = (String) session.getAttribute("password");
 
 	if (userName == null || password == null) {
 
@@ -45,19 +46,19 @@
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: black; color: white; font-size: 11px; font-weight: bold;">
+					style="background-color: black; color: white; font-size: 14px; font-weight: bold;">
 					<tr>
-						<th>Image</th>
-						<th>ProductsName</th>
-						<th>OrdersId</th>
+						<th>Picture</th>
+						<th>ProductName</th>
+						<th>OrderId</th>
 						<th>Quantity</th>
 						<th>Price</th>
 						<th>Time</th>
-						<th>Total</th>
+						<th>Status</th>
 					</tr>
 				</thead>
 				<tbody
-					style="background-color: yellow; font-size: 15px; font-weight: bold;">
+					style="background-color: white; font-size: 15px; font-weight: bold;">
 					<%
 					for (OrderDetails order : orders) {
 					%>
@@ -81,7 +82,7 @@
 			</table>
 		</div>
 	</div>
-	<!-- End of Product Items List -->
+	<!-- ENd of Product Items List -->
 
 
 	<%@ include file="footer.html"%>
