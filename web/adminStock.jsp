@@ -8,6 +8,7 @@
 <title>Product Stocks</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
 <link rel="stylesheet" href="css/changes.css">
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -43,7 +44,7 @@
 		<div class="table-responsive ">
 			<table class="table table-hover table-sm">
 				<thead
-					style="background-color: #2c6c4b; color: white; font-size: 18px;">
+					style="background-color: #115884; color: white; font-size: 18px;">
 					<tr>
 						<th>Image</th>
 						<th>ProductId</th>
@@ -55,7 +56,7 @@
 						<th colspan="2" style="text-align: center">Actions</th>
 					</tr>
 				</thead>
-				<tbody style="background-color: black; color: blue; font-size: 16px;">
+				<tbody style="background-color: white; color: blue; font-size: 16px;">
 
 
 
